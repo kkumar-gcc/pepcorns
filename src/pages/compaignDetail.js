@@ -4,14 +4,14 @@ import Navbar from "../components/navbar";
 
 function CompanyDetail() {
   const [tabState, setTabState] = useState(1);
-  const [showModal,setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const toggleTab = (index) => {
     setTabState(index);
   };
   return (
     <>
       <Navbar page="dashboard" />
-      <Modal onClose ={()=>setShowModal(false)} showModal={showModal}/>
+      <Modal onClose={() => setShowModal(false)} showModal={showModal} />
       <div className="w-full px-2 mt-2 text-gray-700 sm:px-6 sm:mt-6 md:px-20 md:mt-16 ">
         <div className="border border-gray-200 hover:border-gray-400 mt-12 w-full  px-2 md:p-2.5 text-base text-left p-1  rounded-lg  font-normal shadow-sm">
           <div className="flex flex-col-reverse items-stretch justify-center p-4 sm:p-6 sm:flex-row">
@@ -36,11 +36,14 @@ function CompanyDetail() {
                       cars, charter flights, living space & more that rewards
                       users
                     </p>
-                    {/* <p className="mb-1">address : Mumbai Maharashtra</p>
-                    <p className="mb-1">
-                      ● EMAIL : | Website : https://letzrent.com | PAN/TAN :
-                      AAJCR3294F
-                    </p> */}
+                    <ul>
+                      <li>EMAIL : example@email.com</li>
+                      <li>
+                        Website :{" "}
+                        <a href="https://letzrent.com">https://letzrent.com</a>
+                      </li>
+                      <li>PAN/TAN : AAJCR3294F</li>
+                    </ul>
                     <div className="mt-1">
                       <span className="inline-flex py-1 px-2 mb-2 mx-[5px] first:ml-0 text-[10px] leading-4  font-bold tracking-wide border rounded-[4px] shadow-sm border-blue-200 uppercase  bg-blue-100 text-blue-600">
                         GEN Z FOUNDER
@@ -57,7 +60,10 @@ function CompanyDetail() {
                     <button className="shadow-sm mr-2 font-semibold text-base leading-6 border border-blue-500  flex-row rounded-lg py-2 px-4 inline-flex justify-center  bg-blue-500 text-white">
                       Follow
                     </button>
-                    <button onClick={()=>setShowModal(true)} className="shadow-sm  mr-2 font-semibold text-base leading-6 border border-gray-200  flex-row rounded-lg py-2 px-4 inline-flex justify-center  hover:bg-gray-50">
+                    <button
+                      onClick={() => setShowModal(true)}
+                      className="shadow-sm  mr-2 font-semibold text-base leading-6 border border-gray-200  flex-row rounded-lg py-2 px-4 inline-flex justify-center  hover:bg-gray-50"
+                    >
                       Share
                     </button>
                   </div>
@@ -66,8 +72,85 @@ function CompanyDetail() {
             </div>
           </div>
         </div>
+
         <div className="relative flex flex-col w-full mt-3 lg:flex-row ">
           <div className="flex-1 my-2 basis-2/3 lg:w-2/3">
+            <div
+              className={
+                "prose p-0 max-w-none lg:max-w-full xl:max-w-none prose-img:rounded-xl prose-img:mx-auto prose-a:text-blue-600  prose-a:no-underline border border-gray-200  mt-12 w-full   text-base text-left rounded-b-lg  font-normal shadow-sm"
+              }
+            >
+              <div>
+                <iframe
+                  className="w-full min-h-[250px] sm:min-h-[300px] lg:min-h-[390px]"
+                  video-url="currentVdo"
+                  player="bestPlayer"
+                  allowfullscreen="1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  title="LetzRent for Pepcorns | Making renting simple, affordable and rewarding."
+                  src="https://www.youtube.com/embed/biGcDeB2PbQ?start=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fapp.pepcorns.com&amp;widgetid=2"
+                  frameborder="0"
+                ></iframe>
+              </div>
+              <div className="p-4 sm:p-8">
+                <div className="flex flex-row flex-wrap justify-center items-center">
+                  <div className="flex-1 flex flex-row justify-center  last:mr-0 mr-2 mb-2">
+                    Mumbai,Maharashtra
+                  </div>
+                  <div className="flex-1 flex flex-row justify-center last:mr-0 mb-2 mr-2">
+                    <a href="https://letzrent.com">https://letzrent.com</a>
+                  </div>
+                  <div className="flex-1 flex flex-row justify-center not-prose last:mr-0 mb-2 mr-2">
+                    <a
+                      href="https://twitter.com/manishpratik"
+                      className="p-2 last:mr-0 mr-2 rounded-full shadow-sm  text-white bg-[#bc2a8d]"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                      </svg>
+                      <span className="sr-only">Instagram share</span>
+                    </a>
+                    <a
+                      href="#!"
+                      className="p-2 last:mr-0 mr-2  rounded-full shadow-sm  text-white bg-[#4267B2]"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="sr-only">Facebook page</span>
+                    </a>
+                    <a
+                      href="https://twitter.com/manishpratik"
+                      className="p-2 last:mr-0 mr-2 rounded-full shadow-sm  text-white bg-[#FF0000]"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                      </svg>
+                      <span className="sr-only">Youtube Share</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="tabs mb-4  mt-4 dark:border-gray-700 overflow-y-hidden">
               <ul
                 className="flex flex-nowrap  whitespace-nowrap  -mb-px text-sm font-medium text-center -primary "
@@ -821,7 +904,7 @@ function CompanyDetail() {
               </div>
             </article>
           </div>
-          <aside className="my-2 lg:mt-14 overflow-hidden basis-1/3 lg:pl-5 lg:py-6 prose max-w-none">
+          <aside className="  overflow-hidden basis-1/3 lg:pl-5 lg:py-2 prose max-w-none">
             <div className="border border-gray-200  mt-12 w-full  mb-2 px-2 md:p-2.5 text-base text-left p-1  rounded-lg  font-normal shadow-sm">
               <div className="p-4 sm:p-6">
                 <div className="last:mb-0 mb-8">
