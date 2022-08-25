@@ -189,7 +189,7 @@ function Modal(props) {
                 <span className="sr-only">Dribble Share</span>
               </a>
             </div>
-            <div className="border border-gray-200  mt-12 w-full p-4 focus:border-blue-600 hover:border-blue-600 text-base text-left   rounded-lg  font-normal shadow-sm bg-white">
+            <div className="border overflow-y-hidden border-gray-200  mt-12 w-full p-4 focus:border-blue-600 hover:border-blue-600 text-base text-left   rounded-lg  font-normal shadow-sm bg-white">
               https://api.pepcorns.com//founders/#!/campdetails/10
             </div>
           </div>
